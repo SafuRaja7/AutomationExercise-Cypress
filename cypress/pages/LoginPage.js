@@ -17,10 +17,11 @@ class LoginPage {
     cy.contains("Login to your account").should("be.visible");
   }
 
-  enterCorrectEmailAndPass(email, password) {
+  enterEmailAndPass(email, password) {
     cy.get('input[data-qa="login-email"]').type(email);
     cy.get('input[data-qa="login-password"]').type(password);
   }
+  
 
   clickLoginButton() {
     cy.get('button[data-qa="login-button"]').click();
@@ -36,6 +37,10 @@ class LoginPage {
 
   verifyAccountDeleted() {
     cy.contains("Account Deleted!").should("be.visible");
+  }
+
+  verifyLoginErrorVisible() {
+    cy.contains("Your email or password is incorrect!").should("be.visible");
   }
 }
 

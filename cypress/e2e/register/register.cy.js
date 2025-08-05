@@ -10,8 +10,8 @@ describe("User SignUp Flow", () => {
       user = {
         ...userData,
       };
+      RegisterPage.visitHomePage();
     });
-    RegisterPage.visitHomePage();
   });
 
   afterEach(() => {
@@ -55,7 +55,7 @@ describe("User SignUp Flow", () => {
     RegisterPage.verifyAccountCreated();
     RegisterPage.clickContinue();
     RegisterPage.verifyLoggedInAs(user.name);
-    RegisterPage.clickDeleteAccount();
+    RegisterPage.clickDeleteAccount();     // Make sure to comment this below line when you are testing login functionality because it deletes the accont which you created
     RegisterPage.verifyAccountDeleted();
   });
 });
