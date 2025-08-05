@@ -1,0 +1,18 @@
+{
+  "name": "Saifu",
+  "email": "saifu+{{timestamp}}@testmail.com",
+  "password": "Test@1234",
+  "day": "10",
+  "month": "March",
+  "year": "1995",
+  "firstName": "Saifu",
+  "lastName": "Raja",
+  "company": "TestCompany",
+  "address1": "123 Main Street",
+  "address2": "Apt 456",
+  "country": "Australia",
+  "state": "Punjab",
+  "city": "Lahore",
+  "zipcode": "54000",
+  "mobileNumber": "03001234567"
+}

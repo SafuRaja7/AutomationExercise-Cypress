@@ -3,26 +3,16 @@
 import RegisterPage from "../../pages/RegisterPage";
 
 describe("User SignUp Flow", () => {
-  const user = {
-    name: "Saifu",
-    email: `saifu_${Date.now()}@testmail.com`,
-    password: "Test@1234",
-    day: "10",
-    month: "March",
-    year: "1995",
-    firstName: "Saifu",
-    lastName: "Raja",
-    company: "TestCompany",
-    address1: "123 Main Street",
-    address2: "Apt 456",
-    country: "Australia",
-    state: "Punjab",
-    city: "Lahore",
-    zipcode: "54000",
-    mobileNumber: "03001234567",
-  };
+ let user;
 
   beforeEach(() => {
+    cy.fixture('user').then((userData)=>{
+        const timeStamp = Date.now();
+        user={
+            ...userData,
+            email: userData.email.replace("{{timestamp}}", timeStamp)
+        }
+    })
     RegisterPage.visitHomePage();
   });
 
