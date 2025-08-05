@@ -1,6 +1,6 @@
 {
   "name": "Saifu",
-  "email": "saifu+{{timestamp}}@testmail.com",
+  "email": "saifu@testmail.com",
   "password": "Test@1234",
   "day": "10",
   "month": "March",
