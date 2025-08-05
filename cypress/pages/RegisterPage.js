@@ -6,7 +6,6 @@ class RegisterPage {
   }
 
   verifyHomePageVisible() {
-    cy.log("Checking if homepage text is visible...");
     cy.get("body").should("contain", "AutomationExercise");
   }
 
@@ -90,7 +89,6 @@ class RegisterPage {
 
   verifyAccountDeleted() {
     cy.contains("Account Deleted!").should("be.visible");
-    cy.get('a[data-qa="continue-button"]').click();
   }
 }
 
